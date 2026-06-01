@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #030303;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: .4px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,174,0,.18), transparent 38%), #030303;
+  z-index: -2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.topo {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 28px;
+  background: #050505;
+  border-bottom: 3px solid #ffc400;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.marca {
+  line-height: .9;
+  min-width: 190px;
+}
+
+.marca strong {
+  display: block;
+  color: #ffd21a;
+  font-size: 31px;
+}
+
+.marca span {
+  color: #fff;
+  font-size: 26px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 20px;
+}
+
+.menu a {
+  color: #fff;
+  padding: 30px 0 24px;
+  border-bottom: 4px solid transparent;
+}
+
+.menu a:hover,
+.menu .ativo {
+  color: #ffd21a;
+  border-bottom-color: #ffd21a;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  font-size: 13px;
+  line-height: .9;
+  min-width: 260px;
+  justify-content: flex-end;
+}
+
+.logo-prefeitura strong {
+  font-size: 31px;
+}
+
+.logo-semel strong {
+  font-size: 36px;
+}
+
+.hero {
+  min-height: 560px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.15) 70%, #030303 100%), url('capa-corrida-junina.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.info-evento {
+  width: min(1040px, 86%);
+  margin: -70px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(0,0,0,.86);
+  border: 2px solid #d6a300;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 20px 45px rgba(0,0,0,.8);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 120px;
+  padding: 22px 26px;
+  border-right: 1px solid rgba(255,196,0,.6);
+}
+
+.info-item:last-child {
+  border-right: none;
+}
+
+.icone {
+  font-size: 42px;
+  color: #ffc400;
+  filter: drop-shadow(0 0 6px rgba(255,196,0,.55));
+}
+
+.info-item h3 {
+  font-size: 24px;
+  line-height: 1.05;
+}
+
+.info-item p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 8px;
+  color: #eee;
+}
+
+.contador {
+  text-align: center;
+  margin: 52px auto 40px;
+}
+
+.contador h2 {
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.contador span {
+  color: #ffc400;
+}
+
+.tempo {
+  width: min(520px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #b88700;
+  border-radius: 8px;
+  background: rgba(10,10,10,.84);
+  overflow: hidden;
+}
+
+.tempo div {
+  padding: 18px 8px;
+  border-right: 1px solid #b88700;
+}
+
+.tempo div:last-child {
+  border-right: 0;
+}
+
+.tempo strong {
+  display: block;
+  color: #ffc400;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.tempo small {
+  font-size: 16px;
+}
+
+.inscricoes {
+  text-align: center;
+  width: min(1080px, 90%);
+  margin: 0 auto;
+}
+
+.inscricoes h2 {
+  font-size: 42px;
+}
+
+.inscricoes > p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 8px 0 28px;
+}
+
+.cards-inscricao {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  min-height: 172px;
+  border: 2px solid #ffc400;
+  border-radius: 12px;
+  padding: 35px 18px 20px;
+  box-shadow: inset 0 0 32px rgba(0,0,0,.35), 0 12px 24px rgba(0,0,0,.55);
+}
+
+.card h3 {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.card p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 12px 0 24px;
+}
+
+.elite { background: linear-gradient(135deg, #7a0000, #be1515); }
+.master40 { background: linear-gradient(135deg, #00223f, #064f85); }
+.master50 { background: linear-gradient(135deg, #7b2b00, #d85c0d); }
+.kids { background: linear-gradient(135deg, #075500, #11940e); }
+
+.botao,
+.btn {
+  display: inline-block;
+  color: #071018;
+  background: linear-gradient(#ffd94a, #ffae00);
+  padding: 12px 34px;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 900;
+  box-shadow: 0 5px 0 rgba(0,0,0,.25);
+}
+
+.botao:hover,
+.btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+.acessos {
+  width: min(1080px, 90%);
+  margin: 34px auto 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.acesso {
+  min-height: 165px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: rgba(10,10,10,.9);
+  border: 1px solid rgba(255,196,0,.35);
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.55);
+}
+
+.icone-acesso {
+  font-size: 58px;
+  min-width: 65px;
+}
+
+.verde { color: #0aa21c; }
+.laranja { color: #e25a08; }
+.azul { color: #0674c9; }
+
+.acesso h3 {
+  color: #bff4ff;
+  font-size: 25px;
+}
+
+.acesso p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  margin: 10px 0 20px;
+}
+
+.verde-bg { background: #0b7d14; color: #fff; }
+.laranja-bg { background: #c94d09; color: #fff; }
+.azul-bg { background: #075da6; color: #fff; }
+
+.whatsapp {
+  position: fixed;
+  right: 26px;
+  bottom: 36px;
+  z-index: 30;
+  background: #00b84f;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  box-shadow: 0 12px 28px rgba(0,0,0,.45);
+}
+
+footer {
+  border-top: 2px solid #d6a300;
+  text-align: center;
+  padding: 24px 20px;
+  font-family: Arial, sans-serif;
+  color: #eee;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .topo {
+    height: auto;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    font-size: 16px;
+  }
+
+  .menu a {
+    padding: 6px 0;
+  }
+
+  .logos {
+    display: none;
+  }
+
+  .hero {
+    min-height: 430px;
+  }
+
+  .info-evento,
+  .cards-inscricao,
+  .acessos {
+    grid-template-columns: 1fr;
+  }
+
+  .info-evento {
+    margin-top: -35px;
+  }
+
+  .info-item {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,196,0,.5);
+  }
+
+  .info-item:last-child {
+    border-bottom: 0;
+  }
+
+  .whatsapp {
+    left: 18px;
+    right: 18px;
+    text-align: center;
+    bottom: 18px;
+  }
+}
